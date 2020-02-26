@@ -39,6 +39,15 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+// pass currentUser to all routes
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user; // req.user is an authenticated user
+  res.locals.error = req.flash("error");
+  res.locals.success = req.flash("success");
+  next();
+});
+
+
 app.listen((process.env.PORT || 3000), function () {
   console.log("The Server Has Started! at port 3000");
 });
