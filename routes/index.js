@@ -13,7 +13,7 @@ var student = require('../models/student');
 
 // connecting to mlab
 
-const uri = "mongodb+srv://Eshwar:ani4anirudh1999%23@cluster-info-rm5w6.mongodb.net/test?retryWrites=true&w=majority";
+const uri = "mongodb+srv://Eshwar:ani4anirudh1999%23@cluster-info-rm5w6.mongodb.net/csv?retryWrites=true&w=majority";
 
 mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
 .then(() => console.log(`Connected to mlab..!!`))
