@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Exporting into csv
+        </title>
+        <meta charset="utf-8"> 
+        <style>
+             td{
+                text-align: center;
+                font-size: 1.15rem;
+            }
+        </style> 
+    </head>
+    <body>
+        <input type="button" value="export to csv" onclick="location.href='/exportcsv'" />
+
+        <table border="1"cellpadding="5">          
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Student Name</th>
+                <th>Branch</th>
+                <th>Interest</th>
+            </tr>
+            <%  list.forEach(list => {%>
+                <% if(list){%>
+            <tr>
+           
+                   <!-- <td>  <%=list._id%></td> -->
+                   <td>  <%=list.student_name%></td>
+                   <td><%=list.branch%></td>
+                   <td><%=list.interest%></td>
+    
+      
+            </tr>
+            <%}})%>
+        </table>
+    </body>
+</html>
