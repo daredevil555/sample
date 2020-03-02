@@ -1,17 +1,115 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            form to fill up the details
-        </title>
-    </head>
-    <body>
-        <form action="/saveform" method="POST">
-        <h1>Fill the details here</h1>
-        name:<input type="text" name="name" placeholder="Alex"/><br>
-        branch:<input type="text" name="branch" placeholder="CSE/ECE"/><br>
-        interest:<input type="text" name="interest" placeholder="coding"/><br>
-            <input type="submit" value="submit" />
-        </form>
-    </body>
+  <head>
+    <title>Find Your Twin</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body{
+            padding: 50px;  
+        }
+        label{
+            padding-left: 40px;
+        }
+    </style>
+  </head>
+  <body>
+    <form action="/saveform" method="POST">
+        <div align="">
+            <h1>Enter your email id</h1><br>
+            <input type="text" name="email" placeholder="example@gmail.com" required/><br><br>
+            <h1>Fill these questions</h1><br>
+            <!-- Question 1 -->
+            <div>
+                <h2>1)What is the one super power, you wish to have?</h2>
+                <label> <input type="radio" name="optq1" value="Invisibility"/>Invisibility</label><br>
+                <label> <input type="radio" name="optq1" value="Able to fly"/>Able to fly</label><br>
+                <label> <input type="radio" name="optq1" value="Super human Strength"/>Super human Strength</label><br>
+                <label> <input type="radio" name="optq1" value="To read others mind"/>To read others mind</label><br>
+                <label> <input type="radio" name="optq1" value="super intelligence"/>super intelligence</label><br>
+            </div>
+            <!-- Question 2 -->
+            <div>
+                <h2>2)Which animal represents you?</h2>
+                <label> <input type="radio" name="optq2" value="Horse"/>Horse</label><br>
+                <label> <input type="radio" name="optq2" value="Lion"/>Lion</label><br>
+                <label> <input type="radio" name="optq2" value="Dog"/>Dog</label><br>
+                <label> <input type="radio" name="optq2" value="Eagle"/>Eagle</label><br>
+            </div>
+            <!-- Question 3 -->
+            <div>
+                <h2>3)One of the five seses will be lost forever & which one will you choose?</h2>
+                <label> <input type="radio" name="optq3" value="Sight(Seeing)"/>Sight(Seeing)</label><br>
+                <label> <input type="radio" name="optq3" value="Hearing"/>Hearing</label><br>
+                <label> <input type="radio" name="optq3" value="Taste"/>Taste</label><br>
+                <label> <input type="radio" name="optq3" value="Touch"/>Touch</label><br>
+                <label> <input type="radio" name="optq3" value="Smell"/>Smell</label><br>
+            </div>
+            <!-- Question 4 -->
+            <div>
+                <h2>4)If you are a crayon, which color you would be?</h2>
+                <label> <input type="radio" name="optq4" value="White"/>White</label><br>
+                <label> <input type="radio" name="optq4" value="Black"/>Black</label><br>
+                <label> <input type="radio" name="optq4" value="Blue"/>Blue</label><br>
+                <label> <input type="radio" name="optq4" value="Orange"/>Orange</label><br>
+                <label> <input type="radio" name="optq4" value="Pink"/>Pink</label><br>
+                <label> <input type="radio" name="optq4" value="Violet"/>Violet</label><br>
+                <label> <input type="radio" name="optq4" value="Red"/>Red</label><br>
+                <label> <input type="radio" name="optq4" value="Brown"/>Brown</label><br>
+                <label> <input type="radio" name="optq4" value="Yellow"/>Yellow</label><br>
+                <label> <input type="radio" name="optq4" value="Green"/>Green</label><br>
+            </div>
+            <!-- Question 5 -->
+            <div>
+                <h2>5)Who is the person who knows most of your secrets?</h2>
+                <label> <input type="radio" name="optq5" value="None"/>None</label><br>
+                <label> <input type="radio" name="optq5" value="My Mother/Father"/>My Mother/Father</label><br>
+                <label> <input type="radio" name="optq5" value="A Sibling"/>A Sibling</label><br>
+                <label> <input type="radio" name="optq5" value="A Friend"/>A Friend</label><br>
+                <label> <input type="radio" name="optq5" value="Lover"/>Lover</label><br>
+            </div>    
+            <!-- Question 6 -->
+            <div>
+                <h2>6)Which person do you appericiate the most?</h2>
+                <label> <input type="radio" name="optq6" value="An Actor"/>An Actor</label><br>
+                <label> <input type="radio" name="optq6" value="A Scientist"/>A Scientist</label><br>
+                <label> <input type="radio" name="optq6" value="A Politician"/>A Politician</label><br>
+                <label> <input type="radio" name="optq6" value="A Sportsman"/>A Sportsman</label><br>
+            </div>
+            <!-- Question 7 -->
+            <div>
+                <h2>7)What will your greatest achievement?</h2>
+                <label> <input type="radio" name="optq7" value="Travelling a lot"/>Travelling a lot</label><br>
+                <label> <input type="radio" name="optq7" value="Advancing my career"/>Advancing my career</label><br>
+                <label> <input type="radio" name="optq7" value="Finding your love"/>Finding your love</label><br>
+                <label> <input type="radio" name="optq7" value="Having great Friends"/>Having great Friends</label><br>
+            </div>
+            <!-- Question 8 -->
+           <div>
+            <h2>8)If something in your house breaks, what is the first thing you do?</h2>
+            <label> <input type="radio" name="optq8" value="Try to fix it on my own"/>Try to fix it on my own</label><br>
+            <label> <input type="radio" name="optq8" value="Call a Professional"/>Call a Professional</label><br>
+            <label> <input type="radio" name="optq8" value="Call a firend"/>Call a firend</label><br>
+            <label> <input type="radio" name="optq8" value="Try to ignore it"/>Try to ignore it</label><br>
+           </div>
+           <!-- Question 9 -->
+           <div>
+               <h2>9)If you would live with a book, TV show or movie, what would it be?</h2>
+            <label> <input type="radio" name="optq9" value="A Book"/>A Book</label><br>
+            <label> <input type="radio" name="optq9" value="A TV show"/>A TV show</label><br>
+            <label> <input type="radio" name="optq9" value="A movie"/>A Movie</label><br>
+           </div>
+           <!-- Question 10 -->
+           <div>
+               <h2>10)who would you help first?</h2>
+            <label> <input type="radio" name="optq10" value="A crying baby"/>A crying baby</label><br>
+            <label> <input type="radio" name="optq10" value="A old person"/>A old person</label><br>
+            <label> <input type="radio" name="optq10" value="A handicapped person"/>A handicapped person</label><br>
+            <label> <input type="radio" name="optq10" value="A Friend in trouble"/>A Friend in trouble</label><br>
+           </div><br>
+           <div><h3><b>Note:</b>Once submited cannot be edited....<br><br>Please enter your email to know your twin.</h3></div><br>
+            <input type="submit" class="w3-button w3-round w3-blue" value="submit">
+        </div>
+    </form>
+  </body>
 </html>
