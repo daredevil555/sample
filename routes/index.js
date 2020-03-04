@@ -68,7 +68,7 @@ router.post('/saveform',function(req,res,next){
             from: 'mrcetclub@mail.com',
             subject: 'Find Your Twin',
             text: 'Hey, Folk \n' +
-            'This is a confirmation that your response is recorded associated with this email. \nThank You team findyourtwin' 
+            'This is a confirmation that your response is recorded associated with this email. \nThank You \nteam findyourtwin' 
           };
           smtpTransport.sendMail(mailOptions, function(err) {
             console.log('mail sent');
