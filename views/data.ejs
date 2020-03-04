@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Exporting into csv
+        </title>
+        <meta charset="utf-8"> 
+        <style>
+             td{
+                text-align: center;
+                font-size: 1.15rem;
+            }
+        </style> 
+    </head>
+    <body>
+        <input type="button" value="export to csv" onclick="location.href='/exportcsv'" />
+
+        <table border="1"cellpadding="5">          
+            <tr>
+                <th>Email</th>
+                <th>Question 1</th>
+                <th>Question 2</th>
+                <th>Question 3</th>
+                <th>Question 4</th>
+                <th>Question 5</th>
+                <th>Question 6</th>
+                <th>Question 7</th>
+                <th>Question 8</th>
+                <th>Question 9</th>
+                <th>Question 10</th>
+            </tr>
+            <%  list.forEach(list => {%>
+                <% if(list){%>
+            <tr>
+           
+                   <td><%=list.email%></td>
+                   <td><%=list.question1%></td>
+                   <td><%=list.question2%></td>
+                   <td><%=list.question3%></td>
+                   <td><%=list.question4%></td>
+                   <td><%=list.question5%></td>
+                   <td><%=list.question6%></td>
+                   <td><%=list.question7%></td>
+                   <td><%=list.question8%></td>
+                   <td><%=list.question9%></td>
+                   <td><%=list.question10%></td>
+    
+      
+            </tr>
+            <%}})%>
+        </table>
+    </body>
+</html>
