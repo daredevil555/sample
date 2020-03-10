@@ -9,6 +9,7 @@ var student = require('../models/student');
 // connecting to database #mongodb
 // let url = process.env.DATABASEURL || "mongodb://localhost/csv";
 //  mongoose.connect(url, { useNewUrlParser: true,useUnifiedTopology: true,useCreateIndex: true },function(err,database){
+//    console.log("connected to mongodb");
 //  });
 
 // code for nodemailer
@@ -28,7 +29,12 @@ mongoose.connect(uri,{useNewUrlParser:true,useUnifiedTopology:true})
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index');
+  res.render('index',{text:'Hey Folk..'});
+});
+
+// GET home page after error in inputs
+router.get('/index2',function(req,res){
+  res.render('index',{text:'all inputs must be given please check all your answers'});
 });
 
 // GET for responded
@@ -51,7 +57,6 @@ router.post('/saveform',function(req,res,next){
     question9:req.body.optq9,
     question10:req.body.optq10,
   }
-
   student.findOne({email:data.email},function(err,result){
     if(err)
     console.log(err);
@@ -60,7 +65,14 @@ router.post('/saveform',function(req,res,next){
     }
     else{
        student.create(data,function(err,result){
-          if(err) console.log(err);
+          if(err) {
+            // check with mongo error
+            console.log(err);
+            if(err.name == "ValidationError")
+            {
+             return res.redirect('/index2');
+            }
+          }
           console.log("Inserted sucessfully");
           // Mail options to send mail
           var mailOptions = {
@@ -68,7 +80,7 @@ router.post('/saveform',function(req,res,next){
             from: 'mrcetclub@mail.com',
             subject: 'Find Your Twin',
             text: 'Hey, Folk \n' +
-            'This is a confirmation that your response is recorded associated with this email. \nThank You \nteam findyourtwin' 
+            'This is a confirmation that your response is recorded associated with this email. \nThank You team findyourtwin' 
           };
           smtpTransport.sendMail(mailOptions, function(err) {
             console.log('mail sent');
