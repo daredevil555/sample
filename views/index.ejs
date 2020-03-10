@@ -2,13 +2,20 @@
 <html>
   <head>
     <title>Find Your Twin</title>
-    <link rel="shortcut icon" type="image/png" href="public/images/fav.png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
   </head>
   <body>
-    <center><h1>Welcome to FindYourTwin</h1></center><br>
+    <div class="container">
+        <% if ( text ) {%>
+          <br>
+          <div class="alert alert-success" role="alert" align="center" id="close">
+            <h4><%= text %></h4>
+          </div>
+          <% } %>
+        </div>
+    <center><h1>Welcome to FindMyTwin</h1></center><br>
     <form action="/saveform" method="POST" id="foo">
             <h1>Enter your email id</h1><br>
             <input type="text" name="email" placeholder="example@gmail.com" required/><br><br>
@@ -32,7 +39,7 @@
             </div>
             <!-- Question 3 -->
             <div>
-                <h2>3)One of the five senses will be lost forever & which one will you choose?</h2>
+                <h2>3)One of the five seses will be lost forever & which one will you choose?</h2>
                 <label> <input type="radio" name="optq3" value="Sight(Seeing)"/>Sight(Seeing)</label><br>
                 <label> <input type="radio" name="optq3" value="Hearing"/>Hearing</label><br>
                 <label> <input type="radio" name="optq3" value="Taste"/>Taste</label><br>
@@ -104,5 +111,10 @@
            <div><h3><b>Note:</b>Once submited cannot be edited....<br><br>Please enter your email to know your twin.</h3></div><br>
             <input type="submit" class="w3-button w3-round w3-blue" value="submit">
     </form>
+    <script>
+        setTimeout(function(){
+            document.getElementById('close').style.display = 'none';
+        },5000);
+    </script>
   </body>
 </html>
