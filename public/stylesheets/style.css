@@ -1,3 +1,4 @@
+
 #foo .box {
                 padding: 15px;
                 margin: 10px 0;
@@ -7,9 +8,10 @@
                 text-align:center;
             }
 body {
+  font-family: "Comic Sans MS", sans-serif;
   padding: 50px;
 }
-h1 , h3{
+h1{
   font-size: 3rem!important;
 }
 h2{
