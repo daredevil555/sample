@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Find Your Twin</title>
+    <style>
+    header{
+  font-family: "Comic Sans MS", sans-serif;
+  padding: 15px;
+  margin: 10px 0;
+   }
+   </style>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/stylesheets/style.css">
@@ -17,10 +24,9 @@
           <% } %>
         </div>
         <header>
-    <h2>  Welcome to Find Your Twin</h2>
-    <h4>  Answer 10 questions and know the person with same thought process as you</h4>
-  </header>
-    <center><h1>Welcome to FindMyTwin</h1></center><br>
+    <h1>  Welcome to Find Your Twin</h1>
+    <h5>  Answer 10 questions and know the person with same thought process as you</h5>
+  </header><hr>
     <form action="/saveform" method="POST" id="foo">
             <!-- Question 1 -->
             <div class="box">
@@ -127,7 +133,7 @@
             <label> <input type="radio" name="optq8" value="e"/>  I don't do crazy things</label><br>
            </div>
            <br>
-           <h3> Enter your Mail id: <input type="text" name="email" placeholder="example@gmail.com" required/></h3><br><br>
+           <h3> Enter your Mail id: <input type="text" name="email" placeholder="example@gmail.com" required/></h3><br>
            <h4><b> Note:</b> Once submited, cannot be edited....<br><br>
            <div class="sub">
             <input type="submit" class="w3-button w3-round w3-blue" value="submit">
