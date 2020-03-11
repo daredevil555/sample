@@ -7,6 +7,9 @@
 #foo .sub {
                 text-align:center;
             }
+.header {
+  font-family: "Comic Sans MS", sans-serif;
+}
 body {
   font-family: "Comic Sans MS", sans-serif;
   padding: 50px;
