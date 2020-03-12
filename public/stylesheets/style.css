@@ -7,15 +7,8 @@
 #foo .sub {
                 text-align:center;
             }
-.header {
-  font-family: "Comic Sans MS", sans-serif;
-}
 body {
-  font-family: "Comic Sans MS", sans-serif;
   padding: 50px;
-}
-h3{
-  font-family: "Comic Sans MS", sans-serif;
 }
 label{
   padding-left: 40px;
