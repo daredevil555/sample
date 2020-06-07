@@ -85,7 +85,7 @@ router.post('/saveform',function(req,res,next){
           smtpTransport.sendMail(mailOptions, function(err) {
             console.log('mail sent');
           });
-        res.redirect('/thankyou');
+        //res.redirect('/thankyou');
         });
       }
   });
@@ -93,9 +93,9 @@ router.post('/saveform',function(req,res,next){
 });
 
 // GET for result
-router.get('/thankyou',function(req,res){
+/*router.get('/thankyou',function(req,res){
   res.render('result');
-});
+});*/
 
 // GET to show all the students details
 router.get('/tocsv',function(req,res,next){
